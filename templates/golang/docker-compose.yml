@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  application-golang:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    image: dockerhub_user/application-golang:dev
+    container_name: application-golang
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/app
