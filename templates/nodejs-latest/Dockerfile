@@ -7,7 +7,7 @@ WORKDIR /app
 EXPOSE 3000
 
 # Adiciona o de inicializaçao
-COPY .docker/entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh 
 
 # Cria um usuário para não usar o root
