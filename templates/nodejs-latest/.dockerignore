@@ -3,6 +3,7 @@
 
 # Arquivos e diretórios de dependências
 vendor/
+node_modules/
 
 # Arquivos e diretórios do sistema de controle de versão
 .git
@@ -21,3 +22,6 @@ bin/
 .output/
 .deploy/
 .git/
+
+# Arquivos sensiveis
+.env
