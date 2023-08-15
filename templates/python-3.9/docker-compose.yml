@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  application-python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    image: dockerhub_user/application-python:dev
+    container_name: application-python
+    tty: true
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
