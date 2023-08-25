@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  application-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    image: dockerhub_user/application-node:dev
+    container_name: application-node
+    command: "npm run dev"
+    tty: true
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    volumes:
+      - ./:/app
