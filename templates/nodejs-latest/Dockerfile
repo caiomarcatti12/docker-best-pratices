@@ -52,9 +52,9 @@ COPY --from=build /app/dist /app
 # Dá as permissões necessárias
 RUN find /app -type d -exec chmod 755 {} \; && \
     find /app -type f -exec chmod 644 {} \; && \
-    chown -R ${USER}:${GROUP} /app -Rf \
+    chown -R ${USER}:${GROUP} /app -Rf
 
-RUN rm -f /bin/sh /bin/ash /bin/bash /bin/dash /bin/zsh /bin/apk
+RUN rm -f /bin/sh /bin/ash /bin/bash /bin/dash /bin/zsh
 
 USER ${USER}
 
